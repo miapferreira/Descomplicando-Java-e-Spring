@@ -1,4 +1,4 @@
-package com.linuxtips.descomplicandojavaespring;
+package com.linuxtips.descomplicandojavaespring.day04;
 
 import java.util.Scanner;
 
