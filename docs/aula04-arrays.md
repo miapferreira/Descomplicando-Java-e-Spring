@@ -53,7 +53,7 @@ System.out.println(valores.length); // retorna 5
 
 ```java
 for (int i = 0; i < valores.length; i++) {
-    System.out.println(valores[i]);
+        System.out.println(valores[i]);
 }
 ```
 
@@ -63,7 +63,7 @@ for (int i = 0; i < valores.length; i++) {
 
 ```java
 for (int v : valores) {
-    System.out.println(v);
+        System.out.println(v);
 }
 ```
 
@@ -104,3 +104,63 @@ Para listas mais dinâmicas, usamos coleções da API Java como `ArrayList`, `Li
 
 ---
 
+## Preenchendo Arrays com `Arrays.fill`
+
+Você pode preencher todos os elementos de um array com o mesmo valor usando:
+
+```java
+String[] linguagens = new String[5];
+Arrays.fill(linguagens, "java"); // preenche todas as posições com "java"
+```
+
+### Resultado:
+```
+["java", "java", "java", "java", "java"]
+```
+
+---
+
+## Comparando Arrays com `Arrays.equals`
+
+Para saber se dois arrays são exatamente iguais (mesmo tamanho e mesmos valores na mesma ordem):
+
+```java
+int[] a = {1, 2, 3};
+int[] b = {1, 2, 3};
+boolean iguais = Arrays.equals(a, b); // true
+```
+
+---
+
+## Ordenando Arrays com `Arrays.sort`
+
+Ordena os elementos de forma natural (crescente ou alfabética):
+
+```java
+String[] nomes = {"Maria", "Ana", "Carlos"};
+Arrays.sort(nomes);
+```
+
+### Resultado:
+```
+["Ana", "Carlos", "Maria"]
+```
+
+Você também pode ordenar parte de um array copiado:
+
+```java
+String[] copia = Arrays.copyOf(nomes, 2); // pega os dois primeiros
+Arrays.sort(copia);
+```
+
+---
+
+## Exemplo completo
+
+```java
+String[] palavras = {"java", "spring", "descomplicando", "linux", "tips"};
+String[] copia = Arrays.copyOf(palavras, 3);
+Arrays.sort(copia);
+List<String> listaOrdenada = List.of(copia);
+listaOrdenada.forEach(System.out::println);
+```

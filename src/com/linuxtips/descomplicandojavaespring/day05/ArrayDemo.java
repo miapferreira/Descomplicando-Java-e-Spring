@@ -50,7 +50,33 @@ public class ArrayDemo {
 
         String[] arrayCom2 = Arrays.copyOf(treinamentoNome, 2);
         List<String> arrayCom2List = List.of(arrayCom2);
-        arrayCom2List.forEach(System.out::println);
+   //     arrayCom2List.forEach(System.out::println);
+
+        //Preenchendo um array - fill
+        String[] java = new String[10];
+        Arrays.fill(java, "palmeiras");
+        List<String> JavaList = List.of(java);
+     //   JavaList.forEach(System.out::println);
+
+
+        //Comparacao de arrays
+        int[] arrayDeint1 = {
+                1,2,3,4,5,6,7,8,9,10
+        };
+        int[] arrayDeint2 = {
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 20
+        };
+      //  System.out.println("Os arrays são iguais ??" + Arrays.equals(arrayDeint1, arrayDeint2));
+
+        //Sorted
+        String[] sorted = Arrays.copyOf(treinamento,5);
+        Arrays.sort(sorted);
+        List<String> sortedList = List.of(sorted);
+        sortedList.forEach(System.out::println);
+
+
+
+
 
 
 
